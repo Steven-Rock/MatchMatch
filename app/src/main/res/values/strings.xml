@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MatchMatch</string>
+    <string name="action_settings">Settings</string>
+    <string name="DATA_RETURNED">Data refreshed</string>
+    <string name="NO_DATA_RETURNED">No data returned from server</string>
+    <string name="SEARCH_FAILED">Search Exception occurred, please try again later</string>
+
+    <string name="SEARCH_URL">https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&amp;api_key=5423dbab63f23a62ca4a986e7cbb35e2</string>
+    <string name="CARD_BACK_SIDE">https://i.pinimg.com/564x/c1/59/b4/c159b4738dae9c9d8d6417228024de8d.jpg</string>
+    <string name="CARD_TEMP_FROMT_SIDE">http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg</string>
+    <string name="CARD_FROMT_SIDE">https://farm5.staticflickr.com/4493/23703255648_859b136e61_z.jpg</string>
+
+</resources>
