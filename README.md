@@ -3,8 +3,8 @@
 MatchMatch is a card game that lays out 4x4 grid of cards face down. The object is to turn over 2 cards at a timee showing the images on the card underside. Every image has another matching card. If the 2 cards match, they will remain face up. If they do not match they will turn back face down. You must match all the cards in the shortest number of turns.
 
 <p align="center">
-  <img src="https://github.com/Steven-Rock/MatchMatch/blob/master/docs/images/start.PNG" height="250"/>
-  <img src="https://github.com/Steven-Rock/MatchMatch/blob/master/docs/images/matched.PNG" height="250"/>
+  <img src="https://github.com/Steven-Rock/MatchMatch/blob/master/docs/images/start.PNG" height="350"/>
+  <img src="https://github.com/Steven-Rock/MatchMatch/blob/master/docs/images/matched.PNG" height="350"/>
 </p>
 
 
