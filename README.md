@@ -2,27 +2,31 @@
 
 MatchMatch is a card game that lays out 4x4 grid of cards face down. The object is to turn over 2 cards at a timee showing the images on the card underside. Every image has another matching card. If the 2 cards match, they will remain face up. If they do not match they will turn back face down. You must match all the cards in the shortest number of turns.
 
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
 ## Motivation
 
-Full working REST Android application sample showcasing my work, and to add/try new features like frameworks, etc.
+Full working REST Android application sample showcasing my work, and testbed to add/try new features like frameworks, etc.
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Download from github and open with Android Studio
+
+## Frameworks/APIs used
+
+Picasso - for downloading images and caching.
+Flickr - search the latest top 100 images uploaded to flickr. These are cached and shown to the user in increments of 8.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Steven Rock - lead developer
+https://www.linkedin.com/in/steven-rock-0823294/
+
+Send email to stevenrock@gmail.com if you would like to contribute
 
 ## License
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [2017] Steven William Rock, SWR Technologies, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
