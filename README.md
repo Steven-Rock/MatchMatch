@@ -5,6 +5,11 @@ MatchMatch is a card game that lays out 4x4 grid of cards face down. The object 
 ![Screenshot docs/images/start.png](docs/images/start.png)
 ![Screenshot docs/images/matched.png](docs/images/matched.png)
 
+<p align="center">
+  <img src="https://github.com/Steven-Rock/MatchMatch/blob/master/docs/images/start.PNG" width="350"/>
+  <img src="https://github.com/Steven-Rock/MatchMatch/blob/master/docs/images/matched.PNG" width="350"/>
+</p>
+
 
 ## Motivation
 
