@@ -5,6 +5,11 @@ MatchMatch is a card game that lays out 4x4 grid of cards face down. The object 
 ![Alt text](docs/images/start.png)
 ![Alt text](docs/images/matched.png)
 
+<p align="center">
+  <img src="docs/images/start.png" width="150"/>
+  <img src="docs/images/matched.png" width="150"/>
+</p>
+
 ## Motivation
 
 Full working REST Android application sample showcasing my work, and testbed to add/try new features like frameworks, etc.
