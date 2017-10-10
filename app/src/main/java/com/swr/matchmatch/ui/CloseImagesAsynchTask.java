@@ -6,10 +6,10 @@ import android.util.Log;
 import com.squareup.picasso.Picasso;
 import com.swr.matchmatch.R;
 
-/**
- * Created by Steve on 10/8/2017.
- */
 
+/**
+ * Created by Steve Rock, SWR Technologies, LLC  on 10/6/2017.
+ */
 public class CloseImagesAsynchTask extends AsyncTask<String, Void, String> {
 
 

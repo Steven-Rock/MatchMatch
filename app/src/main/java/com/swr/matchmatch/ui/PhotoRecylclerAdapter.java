@@ -14,9 +14,8 @@ import com.swr.matchmatch.util.UIUtils;
 import java.util.List;
 
 /**
- * Created by Steve on 10/7/2017.
+ * Created by Steve Rock, SWR Technologies, LLC  on 10/6/2017.
  */
-
 public class PhotoRecylclerAdapter extends RecyclerView.Adapter<PhotoInfoHolder> {
 
     public final static String TAG = PhotoRecylclerAdapter.class.getSimpleName();;

@@ -12,9 +12,8 @@ import com.swr.matchmatch.model.PhotoInfo;
 import com.swr.matchmatch.util.UIUtils;
 
 /**
- * Created by Steve on 10/7/2017.
+ * Created by Steve Rock, SWR Technologies, LLC  on 10/6/2017.
  */
-
 public class PhotoInfoHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     private static final String TAG = PhotoInfoHolder.class.getSimpleName();

@@ -6,9 +6,8 @@ import android.view.View;
 import com.swr.matchmatch.R;
 
 /**
- * Created by Steve on 10/7/2017.
+ * Created by Steve Rock, SWR Technologies, LLC  on 10/6/2017.
  */
-
 public class UIUtils {
 
     public static void showSnackBar(String msg, View view){
