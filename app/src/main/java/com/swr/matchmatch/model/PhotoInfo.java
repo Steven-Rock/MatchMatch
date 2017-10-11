@@ -243,5 +243,20 @@ public class PhotoInfo {
                 ", state=" + state +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        PhotoInfo photoInfo = (PhotoInfo) o;
+
+        return title != null ? title.equals(photoInfo.title) : photoInfo.title == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return title != null ? title.hashCode() : 0;
+    }
 }
 

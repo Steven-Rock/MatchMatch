@@ -207,7 +207,10 @@ public class HttpAsyncRequest extends AsyncTask<String, Void, String> {
                         }
 
                         photo.generatePhotoUrl();
-                        photos.add(photo);
+
+                        if(!photos.contains(photo)) {
+                            photos.add(photo);
+                        }
 
                     }
                 }
