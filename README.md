@@ -19,7 +19,9 @@ Download from github and open with Android Studio
 ## Frameworks/APIs used
 
 Picasso - for downloading images and caching.
+
 Flickr - search the latest top 100 images uploaded to flickr. These are cached and shown to the user in increments of 8.
+
 Rotate3DAnimation - I added z-axis card rotation so it looks like the card is being turned over when clicked
 
 ## Contributors
