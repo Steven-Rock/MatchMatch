@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.swr.matchmatch.model.Observable;
 import com.swr.matchmatch.model.PhotoInfo;
 import com.swr.matchmatch.ui.PhotoRecylclerAdapter;
@@ -140,11 +141,16 @@ public class MainActivity extends AppCompatActivity implements Observable {
             }
             Collections.shuffle(newPhotos);
 
+            final Activity act = this;
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
 
                     UIUtils.showSnackBar(getString(R.string.DATA_RETURNED) , image);
+
+                    for(PhotoInfo pi: photos){
+                        Picasso.with(act).load(pi.getUrl()).fetch();
+                    }
 
                     mAdapter = new PhotoRecylclerAdapter(newPhotos);
                     mRecyclerView.setAdapter(mAdapter);
@@ -174,6 +180,8 @@ public class MainActivity extends AppCompatActivity implements Observable {
                 public void run() {
 
                     UIUtils.showSnackBar(getString(R.string.NO_DATA_RETURNED) , mRecyclerView);
+
+
 
                 }
             });

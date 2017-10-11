@@ -5,9 +5,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 import com.swr.matchmatch.R;
+import com.swr.matchmatch.Rotate3DAnimation;
 import com.swr.matchmatch.model.PhotoInfo;
 import com.swr.matchmatch.util.UIUtils;
 
@@ -25,7 +28,7 @@ import java.util.List;
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- 
+
  */
 public class PhotoRecylclerAdapter extends RecyclerView.Adapter<PhotoInfoHolder> {
 
@@ -38,6 +41,13 @@ public class PhotoRecylclerAdapter extends RecyclerView.Adapter<PhotoInfoHolder>
     private int matchedCount = 0;
     private int currentlySelected = 0;
     private int nextSelected = 0;
+
+    private StartNextRotate startNext;
+    private Rotate3DAnimation rotation;
+
+    private ImageView image;
+    private String imageUrl;
+
 
     public PhotoRecylclerAdapter(List<PhotoInfo> photos){
         this.photos = photos;
@@ -69,6 +79,8 @@ public class PhotoRecylclerAdapter extends RecyclerView.Adapter<PhotoInfoHolder>
             public void onClick(View v) {
                 // Log here
                 Log.d(TAG, "Showing photo for " + info.getTitle());
+                Log.d(TAG, "Photo info =  " + holder.getpInfo());
+
 
                 steps++;
 
@@ -76,7 +88,12 @@ public class PhotoRecylclerAdapter extends RecyclerView.Adapter<PhotoInfoHolder>
 
                 holder.getpInfo().flipState();
 
-                Picasso.with(holder.getImageView().getContext()).load(info.getUrl()).into(holder.getImageView());
+                image = holder.getImageView();
+
+                //Picasso.with(image.getContext()).load(info.getUrl()).into(image);
+                imageUrl =  info.getUrl();
+
+                startRotation(0,90, image, true);
 
                 // First card selection
                 if(currentlySelected == 0) {
@@ -138,9 +155,67 @@ public class PhotoRecylclerAdapter extends RecyclerView.Adapter<PhotoInfoHolder>
         notifyItemRemoved(position);
     }
 
+    private void startRotation(float start, float end, ImageView image, boolean first) {
+// Calculating center point
+        final float centerX = image.getWidth() / 2.0f;
+        final float centerY = image.getHeight() / 2.0f;
+        Log.d(TAG, "centerX="+centerX+", centerY="+centerY);
+
+        rotation =new Rotate3DAnimation(start, end, centerX, centerY, 0f, true);
+        rotation.setDuration(300);
+        rotation.setFillAfter(true);
+
+        rotation.setInterpolator(new LinearInterpolator());
+
+        startNext = new StartNextRotate();
+        startNext.setFirst(first);
+        rotation.setAnimationListener(startNext);
+
+        image.startAnimation(rotation);
+    }
+
+
     @Override
     public int getItemCount() {
         if(photos != null) return photos.size();
         else return 0;
     }
+
+    private class StartNextRotate implements Animation.AnimationListener {
+
+        private boolean first = false;
+
+        public boolean isFirst() {
+            return first;
+        }
+
+        public void setFirst(boolean first) {
+            this.first = first;
+        }
+
+        @Override
+        public void onAnimationStart(Animation animation) {
+
+        }
+
+        public void onAnimationEnd(Animation animation) {
+
+            Log.d(TAG, "onAnimationEnd......");
+            //image.startAnimation(rotation);
+
+            Picasso.with(image.getContext()).load(imageUrl).into(image);
+
+            if(first) {
+                first = false;
+                startRotation(90, 180, image, first);
+            }
+
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+
+        }
+    }
+
 }

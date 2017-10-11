@@ -228,5 +228,20 @@ public class PhotoInfo {
 
         }
     }
+
+    @Override
+    public String toString() {
+        return "PhotoInfo{" +
+                "id='" + id + '\'' +
+                ", owner='" + owner + '\'' +
+                ", secret='" + secret + '\'' +
+                ", server='" + server + '\'' +
+                ", farm='" + farm + '\'' +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", photoNum=" + photoNum +
+                ", state=" + state +
+                '}';
+    }
 }
 
