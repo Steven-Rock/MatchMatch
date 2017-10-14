@@ -14,7 +14,7 @@ Full working REST Android application sample showcasing my work, and testbed to 
 
 ## Installation
 
-Download from github and open with Android Studio
+Download from github and open/run with Android Studio emulator or install to physical device
 
 ## Frameworks/APIs used
 
@@ -30,6 +30,14 @@ Steven Rock - lead developer
 https://www.linkedin.com/in/steven-rock-0823294/
 
 Send email to stevenrock@gmail.com if you would like to contribute
+
+## Enhancements to add
+
+1. Fix images, are shown in mirror image (flipped) on the backside of cards, rotate before adding
+2. Store top 10 high scores, add person's initials when they get a high score
+3. Add menu item to see high scores
+4. Pagination on 100 at a time to get new flickr latest images
+
 
 ## License
 
