@@ -37,6 +37,7 @@ Send email to stevenrock@gmail.com if you would like to contribute
 2. Store top 10 high scores, add person's initials when they get a high score
 3. Add menu item to see high scores
 4. Pagination on 100 at a time to get new flickr latest images
+5. Long press show image full screen
 
 
 ## License
