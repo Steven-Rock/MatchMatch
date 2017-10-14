@@ -3,7 +3,6 @@ package com.swr.matchmatch.util;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.squareup.picasso.Picasso;
 import com.swr.matchmatch.model.Observable;
 import com.swr.matchmatch.model.PhotoInfo;
 
